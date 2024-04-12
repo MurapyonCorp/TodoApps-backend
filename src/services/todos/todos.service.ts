@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateTodoInput } from 'src/dto/create-todo.input';
 import { UpdateTodoInput } from 'src/dto/update-todo.input';
-import { TodosModel } from 'src/models/todos.model';
+import { TodosModel } from 'src/models/todos/todos.model';
 import { DeleteResult, InsertResult, Repository, UpdateResult } from 'typeorm';
 
 @Injectable()
