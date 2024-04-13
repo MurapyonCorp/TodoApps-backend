@@ -10,12 +10,12 @@ import {
 import { CreateTodoInput } from 'src/dto/create-todo.input';
 import { UpdateTodoInput } from 'src/dto/update-todo.input';
 import { TodosModel } from 'src/models/todos/todos.model';
-import { TodosServices } from 'src/services/todos/todos.service';
+import { TodosService } from 'src/services/todos/todos.service';
 import { DeleteResult, InsertResult, UpdateResult } from 'typeorm';
 
 @Controller('todos')
 export class TodosController {
-  constructor(private readonly todosService: TodosServices) {}
+  constructor(private readonly todosService: TodosService) {}
 
   @Get()
   readAllTodos(): Promise<TodosModel[]> {

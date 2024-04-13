@@ -6,7 +6,7 @@ import { TodosModel } from 'src/models/todos/todos.model';
 import { DeleteResult, InsertResult, Repository, UpdateResult } from 'typeorm';
 
 @Injectable()
-export class TodosServices {
+export class TodosService {
   constructor(
     @InjectRepository(TodosModel)
     private readonly todosRepository: Repository<TodosModel>,
