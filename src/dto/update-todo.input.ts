@@ -4,7 +4,7 @@ import { TodoStatus } from 'src/models/todos/todos.model';
 export class UpdateTodoInput {
   @IsString()
   @IsNotEmpty()
-  id: number;
+  id: string;
 
   @IsString()
   @IsOptional()
