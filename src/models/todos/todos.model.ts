@@ -15,13 +15,10 @@ export enum TodoStatus {
 @Entity('todos')
 export class TodosModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
-  id: number;
+  id: string;
 
   @Column({ type: 'varchar' })
   title: string;
-
-  @Column({ type: 'varchar' })
-  contents: string;
 
   @Column({ type: 'enum', enum: TodoStatus })
   status: TodoStatus;
