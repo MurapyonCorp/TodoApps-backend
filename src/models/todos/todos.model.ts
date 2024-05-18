@@ -17,6 +17,12 @@ export class TodosModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column({ type: 'json' })
+  target_date: {
+    startDate: string;
+    endDate: string;
+  };
+
   @Column({ type: 'varchar' })
   title: string;
 
