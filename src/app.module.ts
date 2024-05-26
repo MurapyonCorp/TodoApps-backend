@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodosModule } from './modules/todos/todos.module';
 import { DATABASE_CONFIG } from './config/database.config';
+import { CountUpTimersModule } from './modules/countup-timers/countup-timers.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { DATABASE_CONFIG } from './config/database.config';
       logging: true,
     }),
     TodosModule,
+    CountUpTimersModule,
   ],
   controllers: [],
   providers: [],
