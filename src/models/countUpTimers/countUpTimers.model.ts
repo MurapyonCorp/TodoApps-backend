@@ -12,6 +12,12 @@ export class CountUpTimersModel extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column({ type: 'json' })
+  target_date: {
+    startDate: string;
+    endDate: string;
+  };
+
   @Column({ type: 'varchar' })
   total_amounts: string;
 

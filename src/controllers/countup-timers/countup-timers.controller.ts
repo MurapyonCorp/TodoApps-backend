@@ -18,26 +18,26 @@ export class CountUpTimersController {
   constructor(private readonly countUpTimersService: CountUpTimersService) {}
 
   @Get()
-  readAllTodos(): Promise<CountUpTimersModel[]> {
+  readAllCountUpTimers(): Promise<CountUpTimersModel[]> {
     return this.countUpTimersService.readAllCountUpTimers();
   }
 
   @Post()
-  async createTodo(
+  async createCountUpTimer(
     @Body() input: CreateCountUpTimerInput,
   ): Promise<InsertResult> {
     return this.countUpTimersService.createCountUpTimer(input);
   }
 
   @Put()
-  async updateTodo(
+  async updateCountUpTimer(
     @Body() input: UpdateCountUpTimerInput,
   ): Promise<UpdateResult> {
     return this.countUpTimersService.updateCountUpTimer(input);
   }
 
   @Delete(':id')
-  async deleteTodo(@Param('id') id: string): Promise<DeleteResult> {
+  async deleteCountUpTimer(@Param('id') id: string): Promise<DeleteResult> {
     return this.countUpTimersService.deleteCountUpTimer(id);
   }
 }
