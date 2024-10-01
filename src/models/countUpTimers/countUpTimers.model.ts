@@ -18,8 +18,14 @@ export class CountUpTimersModel extends BaseEntity {
     endDate: string;
   };
 
-  @Column({ type: 'varchar' })
-  total_amounts: string;
+  @Column({ type: 'integer' })
+  time_hours: number;
+
+  @Column({ type: 'integer' })
+  time_minutes: number;
+
+  @Column({ type: 'integer' })
+  time_seconds: number;
 
   @CreateDateColumn()
   created_at: Date;

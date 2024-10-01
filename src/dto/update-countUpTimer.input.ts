@@ -1,11 +1,13 @@
-import { IsString, IsNotEmpty, IsOptional } from "class-validator";
+import { IsString, IsNotEmpty, IsOptional, IsNumber } from "class-validator";
 
 export class UpdateCountUpTimerInput {
   @IsString()
   @IsNotEmpty()
   id: string;
 
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  total_amounts?: string;
+  time_hours?: number;
+  time_minutes?: number;
+  time_seconds?: number;
 }

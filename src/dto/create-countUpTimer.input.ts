@@ -1,10 +1,12 @@
-import { IsNotEmpty, IsObject, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumber, IsObject } from 'class-validator';
 
 export class CreateCountUpTimerInput {
   @IsObject()
   target_date: object;
 
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
-  total_amounts: string;
+  time_hours: number;
+  time_minutes: number;
+  time_seconds: number;
 }
