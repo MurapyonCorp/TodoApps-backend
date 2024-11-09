@@ -9,8 +9,8 @@ import {
 } from '@nestjs/common';
 import { CreateTodoInput } from '../../dto/create-todo.input';
 import { UpdateTodoInput } from '../../dto/update-todo.input';
-import { TodosModel } from 'src/models/todos/todos.model';
-import { TodosService } from 'src/services/todos/todos.service';
+import { TodosModel } from '../../models/todos/todos.model';
+import { TodosService } from '../../services/todos/todos.service';
 import { DeleteResult, InsertResult, UpdateResult } from 'typeorm';
 
 @Controller('todos')

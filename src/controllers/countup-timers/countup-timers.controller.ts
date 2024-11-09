@@ -7,10 +7,10 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { CreateCountUpTimerInput } from 'src/dto/create-countUpTimer.input';
-import { UpdateCountUpTimerInput } from 'src/dto/update-countUpTimer.input';
-import { CountUpTimersModel } from 'src/models/countUpTimers/countUpTimers.model';
-import { CountUpTimersService } from 'src/services/countup-timers/countup-timers.service';
+import { CreateCountUpTimerInput } from '../../dto/create-countUpTimer.input';
+import { UpdateCountUpTimerInput } from '../../dto/update-countUpTimer.input';
+import { CountUpTimersModel } from '../../models/countUpTimers/countUpTimers.model';
+import { CountUpTimersService } from '../../services/countup-timers/countup-timers.service';
 import { InsertResult, UpdateResult, DeleteResult } from 'typeorm';
 
 @Controller('countup-timers')
