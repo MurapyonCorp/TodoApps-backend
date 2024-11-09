@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CountUpTimersController } from './count-up-timers.controller';
+import { CountUpTimersController } from './countup-timers.controller';
 
 describe('CountUpTimersController', () => {
   let controller: CountUpTimersController;
