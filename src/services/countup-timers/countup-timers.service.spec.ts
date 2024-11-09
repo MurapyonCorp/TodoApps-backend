@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CountUpTimersService } from './count-up-timers.service';
+import { CountUpTimersService } from './countup-timers.service';
 
 describe('CountUpTimersService', () => {
   let service: CountUpTimersService;
