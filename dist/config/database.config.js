@@ -8,7 +8,7 @@ const parseDBConnection = (dbConnection) => {
     if (DB_CONNECTION.some((value) => value === dbConnection)) {
         return dbConnection;
     }
-    return 'mysql';
+    return 'postgres';
 };
 exports.DATABASE_CONFIG = {
     DB_CONNECTION: parseDBConnection(process.env.DB_CONNECTION),
