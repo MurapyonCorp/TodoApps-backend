@@ -8,9 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
 const todos_module_1 = require("./modules/todos/todos.module");
-const database_config_1 = require("./config/database.config");
 const countup_timers_module_1 = require("./modules/countup-timers/countup-timers.module");
 let AppModule = class AppModule {
 };
@@ -18,17 +16,6 @@ exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
         imports: [
-            typeorm_1.TypeOrmModule.forRoot({
-                type: database_config_1.DATABASE_CONFIG.DB_CONNECTION,
-                host: database_config_1.DATABASE_CONFIG.DB_HOST,
-                port: database_config_1.DATABASE_CONFIG.DB_PORT,
-                database: database_config_1.DATABASE_CONFIG.DB_DATABASE,
-                username: database_config_1.DATABASE_CONFIG.DB_USERNAME,
-                password: database_config_1.DATABASE_CONFIG.DB_PASSWORD,
-                entities: [__dirname + '/**/*.model{.ts,.js}'],
-                synchronize: true,
-                logging: true,
-            }),
             todos_module_1.TodosModule,
             countup_timers_module_1.CountUpTimersModule,
         ],
