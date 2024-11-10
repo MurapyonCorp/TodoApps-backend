@@ -9,5 +9,5 @@ async function bootstrap() {
     app.enableCors();
     await app.listen(3000);
 }
-exports.default = bootstrap();
+bootstrap();
 //# sourceMappingURL=main.js.map
