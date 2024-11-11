@@ -26,7 +26,7 @@ exports.AppModule = AppModule = __decorate([
                 username: database_config_1.DATABASE_CONFIG.DB_USERNAME,
                 password: database_config_1.DATABASE_CONFIG.DB_PASSWORD,
                 entities: [__dirname + '/**/*.model{.ts,.js}'],
-                synchronize: true,
+                synchronize: false,
                 logging: true,
             }),
             todos_module_1.TodosModule,

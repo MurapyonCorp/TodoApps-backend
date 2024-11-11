@@ -1,6 +1,6 @@
-import { CreateCountUpTimerInput } from '../../dto/create-countUpTimer.input';
-import { UpdateCountUpTimerInput } from '../../dto/update-countUpTimer.input';
-import { CountUpTimersModel } from '../../models/countUpTimers/countUpTimers.model';
+import { CreateCountUpTimerInput } from 'src/dto/create-countUpTimer.input';
+import { UpdateCountUpTimerInput } from 'src/dto/update-countUpTimer.input';
+import { CountUpTimersModel } from 'src/models/countUpTimers/countUpTimers.model';
 import { Repository, InsertResult, UpdateResult, DeleteResult } from 'typeorm';
 export declare class CountUpTimersService {
     private readonly countUpTimersRepository;
