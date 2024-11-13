@@ -3,7 +3,7 @@ export declare enum TodoStatus {
     incomplete = "incomplete",
     done = "done"
 }
-export declare class TodosModel extends BaseEntity {
+export declare class TodosEntity extends BaseEntity {
     id: string;
     target_date: {
         startDate: string;

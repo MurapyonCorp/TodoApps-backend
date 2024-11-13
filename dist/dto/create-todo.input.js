@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CreateTodoInput = void 0;
 const class_validator_1 = require("class-validator");
-const todos_model_1 = require("../models/todos/todos.model");
+const todos_entity_1 = require("../entities/todos/todos.entity");
 class CreateTodoInput {
 }
 exports.CreateTodoInput = CreateTodoInput;
@@ -25,7 +25,7 @@ __decorate([
     __metadata("design:type", String)
 ], CreateTodoInput.prototype, "title", void 0);
 __decorate([
-    (0, class_validator_1.IsEnum)(todos_model_1.TodoStatus),
+    (0, class_validator_1.IsEnum)(todos_entity_1.TodoStatus),
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], CreateTodoInput.prototype, "status", void 0);

@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.TodosService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const todos_model_1 = require("../../models/todos/todos.model");
+const todos_entity_1 = require("../../entities/todos/todos.entity");
 const typeorm_2 = require("typeorm");
 let TodosService = class TodosService {
     constructor(todosRepository) {
@@ -41,7 +41,7 @@ let TodosService = class TodosService {
 exports.TodosService = TodosService;
 exports.TodosService = TodosService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(todos_model_1.TodosModel)),
+    __param(0, (0, typeorm_1.InjectRepository)(todos_entity_1.TodosEntity)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], TodosService);
 //# sourceMappingURL=todos.service.js.map

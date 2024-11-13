@@ -1,4 +1,4 @@
-import { TodoStatus } from '../models/todos/todos.model';
+import { TodoStatus } from 'src/entities/todos/todos.entity';
 export declare class CreateTodoInput {
     target_date: object;
     title: string;

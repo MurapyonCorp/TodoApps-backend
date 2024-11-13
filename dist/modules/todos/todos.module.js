@@ -10,14 +10,14 @@ exports.TodosModule = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const todos_controller_1 = require("../../controllers/todos/todos.controller");
-const todos_model_1 = require("../../models/todos/todos.model");
+const todos_entity_1 = require("../../entities/todos/todos.entity");
 const todos_service_1 = require("../../services/todos/todos.service");
 let TodosModule = class TodosModule {
 };
 exports.TodosModule = TodosModule;
 exports.TodosModule = TodosModule = __decorate([
     (0, common_1.Module)({
-        imports: [typeorm_1.TypeOrmModule.forFeature([todos_model_1.TodosModel])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([todos_entity_1.TodosEntity])],
         controllers: [todos_controller_1.TodosController],
         providers: [todos_service_1.TodosService],
     })

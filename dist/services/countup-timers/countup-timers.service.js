@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountUpTimersService = void 0;
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
-const countUpTimers_model_1 = require("../../models/countUpTimers/countUpTimers.model");
+const countUpTimers_entity_1 = require("../../entities/countUpTimers/countUpTimers.entity");
 const typeorm_2 = require("typeorm");
 let CountUpTimersService = class CountUpTimersService {
     constructor(countUpTimersRepository) {
@@ -41,7 +41,7 @@ let CountUpTimersService = class CountUpTimersService {
 exports.CountUpTimersService = CountUpTimersService;
 exports.CountUpTimersService = CountUpTimersService = __decorate([
     (0, common_1.Injectable)(),
-    __param(0, (0, typeorm_1.InjectRepository)(countUpTimers_model_1.CountUpTimersModel)),
+    __param(0, (0, typeorm_1.InjectRepository)(countUpTimers_entity_1.CountUpTimersEntity)),
     __metadata("design:paramtypes", [typeorm_2.Repository])
 ], CountUpTimersService);
 //# sourceMappingURL=countup-timers.service.js.map

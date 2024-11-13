@@ -9,41 +9,41 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TodosModel = exports.TodoStatus = void 0;
+exports.TodosEntity = exports.TodoStatus = void 0;
 const typeorm_1 = require("typeorm");
 var TodoStatus;
 (function (TodoStatus) {
     TodoStatus["incomplete"] = "incomplete";
     TodoStatus["done"] = "done";
 })(TodoStatus || (exports.TodoStatus = TodoStatus = {}));
-let TodosModel = class TodosModel extends typeorm_1.BaseEntity {
+let TodosEntity = class TodosEntity extends typeorm_1.BaseEntity {
 };
-exports.TodosModel = TodosModel;
+exports.TodosEntity = TodosEntity;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
     __metadata("design:type", String)
-], TodosModel.prototype, "id", void 0);
+], TodosEntity.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'json' }),
     __metadata("design:type", Object)
-], TodosModel.prototype, "target_date", void 0);
+], TodosEntity.prototype, "target_date", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'varchar' }),
     __metadata("design:type", String)
-], TodosModel.prototype, "title", void 0);
+], TodosEntity.prototype, "title", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'enum', enum: TodoStatus }),
     __metadata("design:type", String)
-], TodosModel.prototype, "status", void 0);
+], TodosEntity.prototype, "status", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], TodosModel.prototype, "created_at", void 0);
+], TodosEntity.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
-], TodosModel.prototype, "updated_at", void 0);
-exports.TodosModel = TodosModel = __decorate([
+], TodosEntity.prototype, "updated_at", void 0);
+exports.TodosEntity = TodosEntity = __decorate([
     (0, typeorm_1.Entity)('todos')
-], TodosModel);
-//# sourceMappingURL=todos.model.js.map
+], TodosEntity);
+//# sourceMappingURL=todos.entity.js.map

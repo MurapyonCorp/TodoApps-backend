@@ -9,40 +9,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CountUpTimersModel = void 0;
+exports.CountUpTimersEntity = void 0;
 const typeorm_1 = require("typeorm");
-let CountUpTimersModel = class CountUpTimersModel extends typeorm_1.BaseEntity {
+let CountUpTimersEntity = class CountUpTimersEntity extends typeorm_1.BaseEntity {
 };
-exports.CountUpTimersModel = CountUpTimersModel;
+exports.CountUpTimersEntity = CountUpTimersEntity;
 __decorate([
     (0, typeorm_1.PrimaryGeneratedColumn)('uuid'),
     __metadata("design:type", String)
-], CountUpTimersModel.prototype, "id", void 0);
+], CountUpTimersEntity.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'json' }),
     __metadata("design:type", Object)
-], CountUpTimersModel.prototype, "target_date", void 0);
+], CountUpTimersEntity.prototype, "target_date", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'integer' }),
     __metadata("design:type", Number)
-], CountUpTimersModel.prototype, "time_hours", void 0);
+], CountUpTimersEntity.prototype, "time_hours", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'integer' }),
     __metadata("design:type", Number)
-], CountUpTimersModel.prototype, "time_minutes", void 0);
+], CountUpTimersEntity.prototype, "time_minutes", void 0);
 __decorate([
     (0, typeorm_1.Column)({ type: 'integer' }),
     __metadata("design:type", Number)
-], CountUpTimersModel.prototype, "time_seconds", void 0);
+], CountUpTimersEntity.prototype, "time_seconds", void 0);
 __decorate([
     (0, typeorm_1.CreateDateColumn)(),
     __metadata("design:type", Date)
-], CountUpTimersModel.prototype, "created_at", void 0);
+], CountUpTimersEntity.prototype, "created_at", void 0);
 __decorate([
     (0, typeorm_1.UpdateDateColumn)(),
     __metadata("design:type", Date)
-], CountUpTimersModel.prototype, "updated_at", void 0);
-exports.CountUpTimersModel = CountUpTimersModel = __decorate([
+], CountUpTimersEntity.prototype, "updated_at", void 0);
+exports.CountUpTimersEntity = CountUpTimersEntity = __decorate([
     (0, typeorm_1.Entity)('countUpTimers')
-], CountUpTimersModel);
-//# sourceMappingURL=countUpTimers.model.js.map
+], CountUpTimersEntity);
+//# sourceMappingURL=countUpTimers.entity.js.map
