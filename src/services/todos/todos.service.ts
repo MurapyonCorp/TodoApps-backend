@@ -2,17 +2,17 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateTodoInput } from 'src/dto/create-todo.input';
 import { UpdateTodoInput } from 'src/dto/update-todo.input';
-import { TodosModel } from 'src/models/todos/todos.model';
+import { TodosEntity } from 'src/entities/todos/todos.entity';
 import { DeleteResult, InsertResult, Repository, UpdateResult } from 'typeorm';
 
 @Injectable()
 export class TodosService {
   constructor(
-    @InjectRepository(TodosModel)
-    private readonly todosRepository: Repository<TodosModel>,
+    @InjectRepository(TodosEntity)
+    private readonly todosRepository: Repository<TodosEntity>,
   ) {}
 
-  async readAllTodos(): Promise<TodosModel[]> {
+  async readAllTodos(): Promise<TodosEntity[]> {
     const selectedTodos = await this.todosRepository.find();
     return selectedTodos;
   }

@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CountUpTimersController } from 'src/controllers/countup-timers/countup-timers.controller';
-import { CountUpTimersModel } from 'src/models/countUpTimers/countUpTimers.model';
+import { CountUpTimersEntity } from 'src/entities/countUpTimers/countUpTimers.entity';
 import { CountUpTimersService } from 'src/services/countup-timers/countup-timers.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([CountUpTimersModel])],
+  imports: [TypeOrmModule.forFeature([CountUpTimersEntity])],
   controllers: [CountUpTimersController],
   providers: [CountUpTimersService],
 })

@@ -2,17 +2,17 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateCountUpTimerInput } from 'src/dto/create-countUpTimer.input';
 import { UpdateCountUpTimerInput } from 'src/dto/update-countUpTimer.input';
-import { CountUpTimersModel } from 'src/models/countUpTimers/countUpTimers.model';
+import { CountUpTimersEntity } from 'src/entities/countUpTimers/countUpTimers.entity';
 import { Repository, InsertResult, UpdateResult, DeleteResult } from 'typeorm';
 
 @Injectable()
 export class CountUpTimersService {
   constructor(
-    @InjectRepository(CountUpTimersModel)
-    private readonly countUpTimersRepository: Repository<CountUpTimersModel>,
+    @InjectRepository(CountUpTimersEntity)
+    private readonly countUpTimersRepository: Repository<CountUpTimersEntity>,
   ) {}
 
-  async readAllCountUpTimers(): Promise<CountUpTimersModel[]> {
+  async readAllCountUpTimers(): Promise<CountUpTimersEntity[]> {
     const selectedCountUpTimers = await this.countUpTimersRepository.find()
     return selectedCountUpTimers
   }

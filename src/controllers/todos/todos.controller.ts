@@ -9,7 +9,7 @@ import {
 } from '@nestjs/common';
 import { CreateTodoInput } from 'src/dto/create-todo.input';
 import { UpdateTodoInput } from 'src/dto/update-todo.input';
-import { TodosModel } from 'src/models/todos/todos.model';
+import { TodosEntity } from 'src/entities/todos/todos.entity';
 import { TodosService } from 'src/services/todos/todos.service';
 import { DeleteResult, InsertResult, UpdateResult } from 'typeorm';
 
@@ -18,7 +18,7 @@ export class TodosController {
   constructor(private readonly todosService: TodosService) {}
 
   @Get()
-  readAllTodos(): Promise<TodosModel[]> {
+  readAllTodos(): Promise<TodosEntity[]> {
     return this.todosService.readAllTodos();
   }
 

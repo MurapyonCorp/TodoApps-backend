@@ -1,19 +1,14 @@
 import {
+  Entity,
   BaseEntity,
+  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
-  Entity,
-  PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
-export enum TodoStatus {
-  incomplete = 'incomplete',
-  done = 'done',
-}
-
-@Entity('todos')
-export class TodosModel extends BaseEntity {
+@Entity('countUpTimers')
+export class CountUpTimersEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -23,11 +18,14 @@ export class TodosModel extends BaseEntity {
     endDate: string;
   };
 
-  @Column({ type: 'varchar' })
-  title: string;
+  @Column({ type: 'integer' })
+  time_hours: number;
 
-  @Column({ type: 'enum', enum: TodoStatus })
-  status: TodoStatus;
+  @Column({ type: 'integer' })
+  time_minutes: number;
+
+  @Column({ type: 'integer' })
+  time_seconds: number;
 
   @CreateDateColumn()
   created_at: Date;
